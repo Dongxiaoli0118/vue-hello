@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>Hello World from Vue!</h1>
+    <h1>this is second push</h1>
   </div>
 </template>
 
