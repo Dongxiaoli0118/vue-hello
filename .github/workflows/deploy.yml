@@ -31,7 +31,7 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         source: "dist/*"
-        target: "/var/www/vue-app"  # 我为你选了这个目录
+        target: "/var/www/vue"  # 我为你选了这个目录
 
     - name: SSH - Reload nginx
       uses: appleboy/ssh-action@v1.0.0
@@ -40,5 +40,5 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          mkdir -p /var/www/vue-app
+          mkdir -p /var/www/vue
           systemctl restart nginx
