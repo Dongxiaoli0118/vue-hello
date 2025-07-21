@@ -35,7 +35,6 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         source: "dist/"
         target: "/var/www/vue"  # 我为你选了这个目录
-        recursive: true
 
     - name: SSH - Reload nginx
       uses: appleboy/ssh-action@v1.0.0
